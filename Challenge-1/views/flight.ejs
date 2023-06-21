@@ -1,0 +1,81 @@
+<%- include("nav.ejs"); -%>
+
+<h1>Flight-<%=flightNo%></h1>
+  <style>
+
+    .container {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        margin-top: 40px;
+    }
+
+    h1 {
+        margin-top: 10px;
+      text-align: center;
+    }
+
+    h3 {
+        margin-top: 10px;
+      text-align: center;
+    }
+    form {
+      margin-top: 30px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="number"],
+    input[type="checkbox"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    p {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Flight Indicators</h1>
+    <form method="POST">
+      <label for="fuel">Fuel:</label>
+      <input type="number" id="fuel" name="fuel"  required>
+      <label for="altitude">Altitude:</label>
+      <input type="number" id="altitude" name="altitude" required>
+      <label for="flaps">Flaps:</label>
+      <input type="number" id="flaps" name="flaps"  required>
+      <label for="nosegear">Nose Gear:</label>
+      <input type="checkbox" id="nosegear" name="nosegear">
+      <button type="submit">Check Flight</button>
+    </form>
+  </div>
+  <h3><%=faults%></h3>
+</body>
+</html>
+</div>

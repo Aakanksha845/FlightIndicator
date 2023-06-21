@@ -1,0 +1,5 @@
+.flex-this{
+    display: flex !important;
+    flex-direction: column;
+}
+  
